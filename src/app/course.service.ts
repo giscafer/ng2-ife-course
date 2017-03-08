@@ -15,6 +15,7 @@ export class CourseService {
 
   query(type = 'XIAOWEI',cb): Promise<Course[]> {
     if (!cb) throw new Error("Bad response from server");
+    if(type==='' || type==='null' || type==='undefined') type='xiaowei';
     type = type.toUpperCase();
     SERVER_URL = DataJson[type + '_COURSE_JSON'];
     return this.http.get(`${SERVER_URL}`)

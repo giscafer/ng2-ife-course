@@ -5,7 +5,7 @@ import  {CourseComponent} from './course/course.component';
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/',
+    component: CourseComponent,
     pathMatch: 'full'
   }, {
     path: 'xiaowei',
