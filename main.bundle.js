@@ -308,6 +308,8 @@ var HeaderComponent = (function () {
     function HeaderComponent(router) {
         this.router = router;
         this.currentSelected = '';
+        this.mobine = window.innerWidth > 1000 ? false : true;
+        this.displayStyle = !this.mobine ? 'inline-block' : 'none';
     }
     HeaderComponent.prototype.ngOnInit = function () {
         var path = this.router.url.substr(0);
@@ -316,6 +318,24 @@ var HeaderComponent = (function () {
     HeaderComponent.prototype.selectMenu = function (type) {
         if (type === void 0) { type = 'xiaowei'; }
         this.currentSelected = type;
+    };
+    HeaderComponent.prototype.phoneMenuClick = function ($event) {
+        if (!this.mobine)
+            return;
+        if ($event.target.nodeName === 'SPAN' && $event.target.id == "main-nav-toggle") {
+            if (this.displayStyle === 'none') {
+                this.displayStyle = 'inline-block';
+            }
+            else {
+                this.displayStyle = 'none';
+            }
+        }
+        else if ($event.target.nodeName === 'SPAN' || $event.target.nodeName === 'LI' && $event.target.id !== "main-nav-toggle") {
+            this.displayStyle = 'none';
+        }
+        else {
+            this.displayStyle = 'inline-block';
+        }
     };
     HeaderComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
@@ -581,7 +601,7 @@ module.exports = "<footer class=\"footer\">\r\n  <ul class=\"list-inline text-ce
 /***/ 521:
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"navbar navbar-static-top\">\r\n  <div class=\"container\">\r\n    <div id=\"logo-nav\" class=\"navbar-header\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a href=\"../\" id=\"logo\" title=\"百度前端技术学院demo\">百度前端技术学院demo</a></li>\r\n      </ul>\r\n    </div>\r\n    <div id=\"bs-navbar\" class=\"navbar-collapse collapse\">\r\n      <span class=\"btn\" id=\"main-nav-toggle\">菜单</span>\r\n      <ul class=\"nav navbar-nav\" ref=\"myMenu\">\r\n        <li routerLink=\"/xiaowei\"  [class.selected]=\"currentSelected === 'xiaowei'\"><span (click)=\"selectMenu('xiaowei')\"\r\n        >小薇学院</span></li>\r\n        <li routerLink=\"/binbin\" [class.selected]=\"currentSelected === 'binbin'\"><span (click)=\"selectMenu('binbin')\"\r\n        >斌斌学院</span></li>\r\n        <li routerLink=\"/yaoyao\" [class.selected]=\"currentSelected === 'yaoyao'\"><span (click)=\"selectMenu('yaoyao')\"\r\n        >耀耀学院</span></li>\r\n        <li routerLink=\"/business\" [class.selected]=\"currentSelected === 'business'\"><span (click)=\"selectMenu('business')\"\r\n        >商业平台学院</span></li>\r\n        <li routerLink=\"/echartsvr\" [class.selected]=\"currentSelected === 'echartsvr'\"><span (click)=\"selectMenu('echartsvr')\"\r\n        >Echarts & WebVR</span></li>\r\n        <li routerLink=\"/nuomi\" [class.selected]=\"currentSelected === 'nuomi'\"><span (click)=\"selectMenu('nuomi')\"\r\n        >百度糯米学院</span></li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</header>\r\n"
+module.exports = "<header class=\"navbar navbar-static-top\">\r\n  <div class=\"container\">\r\n    <div id=\"logo-nav\" class=\"navbar-header\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a href=\"../\" id=\"logo\" title=\"百度前端技术学院demo\">百度前端技术学院demo</a></li>\r\n      </ul>\r\n    </div>\r\n    <div id=\"bs-navbar\" class=\"navbar-collapse collapse\">\r\n      <span class=\"btn\" id=\"main-nav-toggle\" (click)=\"phoneMenuClick($event)\" >菜单</span>\r\n      <ul class=\"nav navbar-nav\" (click)=\"phoneMenuClick($event)\" [style.display]=\"displayStyle\"  #myMenu>\r\n        <li routerLink=\"/xiaowei\"  [class.selected]=\"currentSelected === 'xiaowei'\"><span (click)=\"selectMenu('xiaowei')\"\r\n        >小薇学院</span></li>\r\n        <li routerLink=\"/binbin\" [class.selected]=\"currentSelected === 'binbin'\"><span (click)=\"selectMenu('binbin')\"\r\n        >斌斌学院</span></li>\r\n        <li routerLink=\"/yaoyao\" [class.selected]=\"currentSelected === 'yaoyao'\"><span (click)=\"selectMenu('yaoyao')\"\r\n        >耀耀学院</span></li>\r\n        <li routerLink=\"/business\" [class.selected]=\"currentSelected === 'business'\"><span (click)=\"selectMenu('business')\"\r\n        >商业平台学院</span></li>\r\n        <li routerLink=\"/echartsvr\" [class.selected]=\"currentSelected === 'echartsvr'\"><span (click)=\"selectMenu('echartsvr')\"\r\n        >Echarts & WebVR</span></li>\r\n        <li routerLink=\"/nuomi\" [class.selected]=\"currentSelected === 'nuomi'\"><span (click)=\"selectMenu('nuomi')\"\r\n        >百度糯米学院</span></li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</header>\r\n"
 
 /***/ }),
 
