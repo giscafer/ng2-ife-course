@@ -6,8 +6,8 @@
       </ul>
     </div>
     <div id="bs-navbar" class="navbar-collapse collapse">
-      <span class="btn" id="main-nav-toggle">菜单</span>
-      <ul class="nav navbar-nav" ref="myMenu">
+      <span class="btn" id="main-nav-toggle" (click)="phoneMenuClick($event)" >菜单</span>
+      <ul class="nav navbar-nav" (click)="phoneMenuClick($event)" [style.display]="displayStyle"  #myMenu>
         <li routerLink="/xiaowei"  [class.selected]="currentSelected === 'xiaowei'"><span (click)="selectMenu('xiaowei')"
         >小薇学院</span></li>
         <li routerLink="/binbin" [class.selected]="currentSelected === 'binbin'"><span (click)="selectMenu('binbin')"
