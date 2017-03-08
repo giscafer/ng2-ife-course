@@ -32,6 +32,8 @@ var CourseService = (function () {
         if (type === void 0) { type = 'XIAOWEI'; }
         if (!cb)
             throw new Error("Bad response from server");
+        if (type === '' || type === 'null' || type === 'undefined')
+            type = 'xiaowei';
         type = type.toUpperCase();
         SERVER_URL = __WEBPACK_IMPORTED_MODULE_3__data_dataJson__[type + '_COURSE_JSON'];
         return this.http.get("" + SERVER_URL)
@@ -412,7 +414,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var appRoutes = [
     {
         path: '',
-        redirectTo: '/',
+        component: __WEBPACK_IMPORTED_MODULE_2__course_course_component__["a" /* CourseComponent */],
         pathMatch: 'full'
     }, {
         path: 'xiaowei',
