@@ -429,6 +429,10 @@ var appRoutes = [
     }, {
         path: 'echarts-vr',
         component: __WEBPACK_IMPORTED_MODULE_2__course_course_component__["a" /* CourseComponent */],
+    },
+    // 如果地址栏中输入没有定义的路由就跳转到one路由界面
+    {
+        path: '**', redirectTo: "xiaowei"
     }
 ];
 var AppRouteModule = (function () {
@@ -561,35 +565,35 @@ module.exports = module.exports.toString();
 /***/ 519:
 /***/ (function(module, exports) {
 
-module.exports = "<app-header></app-header>\n<div class=\"App\">\n  <div class=\"App-header\">\n    <app-jumbotron></app-jumbotron>\n  </div>\n  <div class=\"main-container\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n<app-footer></app-footer>\n"
+module.exports = "<app-header></app-header>\r\n<div class=\"App\">\r\n  <div class=\"App-header\">\r\n    <app-jumbotron></app-jumbotron>\r\n  </div>\r\n  <div class=\"main-container\">\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n<app-footer></app-footer>\r\n"
 
 /***/ }),
 
 /***/ 520:
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"footer\">\n  <ul class=\"list-inline text-center\">\n    <li><a href=\"https://github.com/giscafer/\" target=\"_blank\">giscafer © 2017</a></li>\n    <li class=\"phone\">ng2-ife-course</li>\n    <li class=\"phone\"><a href=\"https://github.com/giscafer/ng2-ife-course/issues/\" target=\"_blank\">意见反馈</a></li>\n    <li class=\"phone\"><a href=\"https://github.com/giscafer/ng2-ife-course/\" target=\"_blank\">Star Me</a></li>\n    <li class=\"phone\"><a href=\"https://github.com/giscafer/ng2-ife-course/\" target=\"_blank\">Power by Angular2</a></li>\n  </ul>\n  <p>推荐关注微信公众号：giscafer</p>\n</footer>\n"
+module.exports = "<footer class=\"footer\">\r\n  <ul class=\"list-inline text-center\">\r\n    <li><a href=\"https://github.com/giscafer/\" target=\"_blank\">giscafer © 2017</a></li>\r\n    <li class=\"phone\">ng2-ife-course</li>\r\n    <li class=\"phone\"><a href=\"https://github.com/giscafer/ng2-ife-course/issues/\" target=\"_blank\">意见反馈</a></li>\r\n    <li class=\"phone\"><a href=\"https://github.com/giscafer/ng2-ife-course/\" target=\"_blank\">Star Me</a></li>\r\n    <li class=\"phone\"><a href=\"https://github.com/giscafer/ng2-ife-course/\" target=\"_blank\">Power by Angular2</a></li>\r\n  </ul>\r\n  <p>推荐关注微信公众号：giscafer</p>\r\n</footer>\r\n"
 
 /***/ }),
 
 /***/ 521:
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"navbar navbar-static-top\">\n  <div class=\"container\">\n    <div id=\"logo-nav\" class=\"navbar-header\">\n      <ul class=\"nav navbar-nav\">\n        <li><a href=\"../\" id=\"logo\" title=\"百度前端技术学院demo\">百度前端技术学院demo</a></li>\n      </ul>\n    </div>\n    <div id=\"bs-navbar\" class=\"navbar-collapse collapse\">\n      <span class=\"btn\" id=\"main-nav-toggle\">菜单</span>\n      <ul class=\"nav navbar-nav\" ref=\"myMenu\">\n        <li routerLink=\"/xiaowei\"  [class.selected]=\"currentSelected === 'xiaowei'\"><span (click)=\"selectMenu('xiaowei')\"\n        >小薇学院</span></li>\n        <li routerLink=\"/binbin\" [class.selected]=\"currentSelected === 'binbin'\"><span (click)=\"selectMenu('binbin')\"\n        >斌斌学院</span></li>\n        <li routerLink=\"/yaoyao\" [class.selected]=\"currentSelected === 'yaoyao'\"><span (click)=\"selectMenu('yaoyao')\"\n        >耀耀学院</span></li>\n        <li routerLink=\"/business\" [class.selected]=\"currentSelected === 'business'\"><span (click)=\"selectMenu('business')\"\n        >商业平台学院</span></li>\n        <li routerLink=\"/echartsvr\" [class.selected]=\"currentSelected === 'echartsvr'\"><span (click)=\"selectMenu('echartsvr')\"\n        >Echarts & WebVR</span></li>\n        <li routerLink=\"/nuomi\" [class.selected]=\"currentSelected === 'nuomi'\"><span (click)=\"selectMenu('nuomi')\"\n        >百度糯米学院</span></li>\n      </ul>\n    </div>\n  </div>\n</header>\n"
+module.exports = "<header class=\"navbar navbar-static-top\">\r\n  <div class=\"container\">\r\n    <div id=\"logo-nav\" class=\"navbar-header\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a href=\"../\" id=\"logo\" title=\"百度前端技术学院demo\">百度前端技术学院demo</a></li>\r\n      </ul>\r\n    </div>\r\n    <div id=\"bs-navbar\" class=\"navbar-collapse collapse\">\r\n      <span class=\"btn\" id=\"main-nav-toggle\">菜单</span>\r\n      <ul class=\"nav navbar-nav\" ref=\"myMenu\">\r\n        <li routerLink=\"/xiaowei\"  [class.selected]=\"currentSelected === 'xiaowei'\"><span (click)=\"selectMenu('xiaowei')\"\r\n        >小薇学院</span></li>\r\n        <li routerLink=\"/binbin\" [class.selected]=\"currentSelected === 'binbin'\"><span (click)=\"selectMenu('binbin')\"\r\n        >斌斌学院</span></li>\r\n        <li routerLink=\"/yaoyao\" [class.selected]=\"currentSelected === 'yaoyao'\"><span (click)=\"selectMenu('yaoyao')\"\r\n        >耀耀学院</span></li>\r\n        <li routerLink=\"/business\" [class.selected]=\"currentSelected === 'business'\"><span (click)=\"selectMenu('business')\"\r\n        >商业平台学院</span></li>\r\n        <li routerLink=\"/echartsvr\" [class.selected]=\"currentSelected === 'echartsvr'\"><span (click)=\"selectMenu('echartsvr')\"\r\n        >Echarts & WebVR</span></li>\r\n        <li routerLink=\"/nuomi\" [class.selected]=\"currentSelected === 'nuomi'\"><span (click)=\"selectMenu('nuomi')\"\r\n        >百度糯米学院</span></li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</header>\r\n"
 
 /***/ }),
 
 /***/ 522:
 /***/ (function(module, exports) {
 
-module.exports = "<div class='good-column'>\n  <div  *ngFor=\"let course of courses\">\n    <div class='good'>\n      <a href=\"{{course.url}}\" target='_blank'>\n        <div class='icon'>\n          <img src=\"{{course.img}}\" alt=\"{{course.name}}\" class='good-img'/>\n        </div>\n        <div class='good-name' title=\"{{course.name}}\">\n          <br/>{{course.name}}\n        </div>\n      </a>\n    </div>\n  </div>\n<div *ngIf=\"courses.length===0\">\n  <p  [ngStyle]=\"currentStyles\">加载中……</p>\n</div>\n</div>\n"
+module.exports = "<div class='good-column'>\r\n  <div  *ngFor=\"let course of courses\">\r\n    <div class='good'>\r\n      <a href=\"{{course.url}}\" target='_blank'>\r\n        <div class='icon'>\r\n          <img src=\"{{course.img}}\" alt=\"{{course.name}}\" class='good-img'/>\r\n        </div>\r\n        <div class='good-name' title=\"{{course.name}}\">\r\n          <br/>{{course.name}}\r\n        </div>\r\n      </a>\r\n    </div>\r\n  </div>\r\n<div *ngIf=\"courses.length===0\">\r\n  <p  [ngStyle]=\"currentStyles\">加载中……</p>\r\n</div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 523:
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"banner\">\n  <br/>\n  <h2>百度前端技术学院习题demo</h2><br/>\n  <small>习题正在学习中，持续更新……</small>\n  <div class=\"jumbotron-btn\">\n    <a href=\"http://ife.giscafer.com/\" target=\"_blank\" class=\"btn btn-default\">查看React版本</a>\n    <a  href=\"https://github.com/giscafer/ng2-ife-course\" target=\"_blank\" class=\"btn btn-default\">Github</a>\n  </div>\n</div>\n"
+module.exports = "<div id=\"banner\">\r\n  <br/>\r\n  <h2>百度前端技术学院习题demo</h2><br/>\r\n  <small>习题正在学习中，持续更新……</small>\r\n  <div class=\"jumbotron-btn\">\r\n    <a href=\"http://ife.giscafer.com/\" target=\"_blank\" class=\"btn btn-default\">查看React版本</a>\r\n    <a  href=\"https://github.com/giscafer/ng2-ife-course\" target=\"_blank\" class=\"btn btn-default\">Github</a>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
