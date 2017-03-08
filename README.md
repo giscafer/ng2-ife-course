@@ -2,7 +2,9 @@
 
 ife-course SPA with angular2
 
-百度前端技术学院演示站，angular2版
+百度前端技术学院演示站，angular2版本： http://ng2ife.giscafer.com
+
+**React 版本：** https://github.com/giscafer/ife-course-demo/tree/master/build-site
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -27,3 +29,13 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## License
+
+MIT
+
+---
+
+> [giscafer.com](http://giscafer.com) &nbsp;&middot;&nbsp;
+> GitHub [@giscafer](https://github.com/giscafer) &nbsp;&middot;&nbsp;
+> Weibo [@Nickbing Lao](https://weibo.com/laohoubin)
