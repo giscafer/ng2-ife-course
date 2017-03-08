@@ -22,6 +22,10 @@ const appRoutes: Routes = [
   }, {
     path: 'echarts-vr',
     component: CourseComponent,
+  },
+  // 如果地址栏中输入没有定义的路由就跳转到one路由界面
+  {
+    path: '**', redirectTo: "xiaowei"
   }
 ]
 
