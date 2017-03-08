@@ -1,3 +1,17 @@
-<p>
-  course works!
-</p>
+<div class='good-column'>
+  <div  *ngFor="let course of courses">
+    <div class='good'>
+      <a href="{{course.url}}" target='_blank'>
+        <div class='icon'>
+          <img src="{{course.img}}" alt="{{course.name}}" class='good-img'/>
+        </div>
+        <div class='good-name' title="{{course.name}}">
+          <br/>{{course.name}}
+        </div>
+      </a>
+    </div>
+  </div>
+<div *ngIf="courses.length===0">
+  <p  [ngStyle]="currentStyles">加载中……</p>
+</div>
+</div>

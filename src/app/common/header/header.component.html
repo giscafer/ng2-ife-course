@@ -6,19 +6,19 @@
       </ul>
     </div>
     <div id="bs-navbar" class="navbar-collapse collapse">
-      <span class="btn" id="main-nav-toggle" >菜单</span>
+      <span class="btn" id="main-nav-toggle">菜单</span>
       <ul class="nav navbar-nav" ref="myMenu">
-        <li><span
+        <li routerLink="/xiaowei"  [class.selected]="currentSelected === 'xiaowei'"><span (click)="selectMenu('xiaowei')"
         >小薇学院</span></li>
-        <li><span
+        <li routerLink="/binbin" [class.selected]="currentSelected === 'binbin'"><span (click)="selectMenu('binbin')"
         >斌斌学院</span></li>
-        <li><span
+        <li routerLink="/yaoyao" [class.selected]="currentSelected === 'yaoyao'"><span (click)="selectMenu('yaoyao')"
         >耀耀学院</span></li>
-        <li><span
+        <li routerLink="/business" [class.selected]="currentSelected === 'business'"><span (click)="selectMenu('business')"
         >商业平台学院</span></li>
-        <li><span
+        <li routerLink="/echartsvr" [class.selected]="currentSelected === 'echartsvr'"><span (click)="selectMenu('echartsvr')"
         >Echarts & WebVR</span></li>
-        <li><span
+        <li routerLink="/nuomi" [class.selected]="currentSelected === 'nuomi'"><span (click)="selectMenu('nuomi')"
         >百度糯米学院</span></li>
       </ul>
     </div>
